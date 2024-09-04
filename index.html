@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css"/>
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <title>Test</title>
+    <style>
+        .header {
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            transition: transform 0.3s ease-in-out; /* Transition for smooth animation */
+            transform: translateY(0); /* Initially at original position */
+        }
+
+        .header.hidden {
+            transform: translateY(-100%); /* Move the header off-screen when hidden */
+        }
+
+        .header::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        body {
+            background-image: url(images/background.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 20px;
+            color: white;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .logo img {
+            height: 40px;
+            margin: 10px;
+        }
+
+        .options {
+            float: right;
+        }
+
+        .options button {
+            background-color: #ff0000;
+            color: #fff;
+            font-size: 15px;
+            padding: 10px;
+            margin-top: 10px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-family: Fredoka, sans-serif;
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        .options button:hover {
+            background-color: blue;
+        }
+
+        .whitespace {
+            padding-bottom: 100px;
+            background-color: white;
+            opacity: 0.7;
+            border-radius: 20px;
+            position: relative;
+        }
+        h1 {
+            font-family: Luckiest Guy, sans-serif;
+            font-size: 50px;
+        }
+        p {
+            font-family: Varela Round, sans-serif;
+            font-size: 25px;
+        }
+    </style>
+    <script>
+        // JavaScript to handle scroll animation
+        let prevScrollPos = window.pageYOffset;
+        let header = document.querySelector('.header');
+        let isScrolling = false;
+
+        function scrollAnimation() {
+            isScrolling = true;
+            let currentScrollPos = window.pageYOffset;
+            if (prevScrollPos > currentScrollPos) {
+                header.classList.remove('hidden');
+            } else if (prevScrollPos < currentScrollPos) {
+                header.classList.add('hidden');
+            }
+            prevScrollPos = currentScrollPos;
+
+            window.requestAnimationFrame(function () {
+                isScrolling = false;
+            });
+        }
+
+        window.addEventListener('scroll', function () {
+            if (!isScrolling) {
+                window.requestAnimationFrame(scrollAnimation);
+            }
+        });
+
+        // Initially check scroll position to hide/show the header
+        window.addEventListener('DOMContentLoaded', function () {
+            if (window.scrollY > 0) {
+                header.classList.add('hidden');
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="images/header.png" alt="Logo">
+        </div>
+        <div class="options">
+            <button type="button" onclick="window.location='index.html'">Home</button>
+            <button type="button" onclick="window.location='about.html'">About</button>
+            <button type="button" onclick="window.location='WebCoding.html'">Html Help</button>
+            <button type="button" onclick="window.location='js.html'">JavaScript Journey</button>
+            <button type="button" onclick="window.location='py.html'">Python Programming</button>
+            <button type="button" onclick="window.location='basic.html'">Begginers' Basic</button>
+            <button type="button" onclick="window.location='vid.html'">Video Tutorials</button>
+        </div>
+    </div>
+
+    <h1>Welcome to the <img style="height: 45px; width: auto;" src="images/header.png"> website!</h1> <!--This can also say "Python Programming" or "HTML Help", etc. Ignore the img thing, thats just for the index page.-->
+    <py-config>packages = ["tkinter"]</py-config>
+    <py-script>import tkinter as tk
+        import csv
+        root = tk.Tk()
+        root.title("Create Account")
+        root.geometry("600x600")
+        root.resizable(False, False)
+        #root.mainloop()
+        def create():
+            namevar = 'cool'
+            frame = tk.Frame(root)
+            frame.pack()
+            label = tk.Label(frame, text = "Create your account. Fill in your information below:", font = '75')
+            label.grid(row = 1, column = 1)
+            entry = tk.Entry(frame, textvariable = namevar, font = ('calibre', 10, 'normal'))
+            entry.insert(0, "Please enter your username here: ")
+            entry.config(width=30, fg="gray")
+            entry.grid(row = 5, column = 1)
+            root.mainloop()
+            
+        create()</py-script>
+    <p>Do you already have an Account? <a style= color:aqua; href="pytests/create.py">Begin</a></p>
+
+</body>
+<footer>
+    <p style="background-color: black; color: white; text-align: center; font-family: 'Open Sans', sans-serif; font-size: 20px;">&copyKidsCanCode 2023. All rights Reserved. All material is in the possesion of the creator, Shalom Frenkel. Do not copy in any way.</p>
+</footer>
+</html>
+
+
+

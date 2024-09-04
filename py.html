@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <title>Test</title>
+    <style>
+        .header {
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            transition: transform 0.3s ease-in-out; /* Transition for smooth animation */
+            transform: translateY(0); /* Initially at original position */
+        }
+
+        .header.hidden {
+            transform: translateY(-100%); /* Move the header off-screen when hidden */
+        }
+
+        .header::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        body {
+            background-image: url(images/background.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            font-size: 20px;
+            color: white;
+        }
+        
+        .logo {
+            float: left;
+        }
+
+        .logo img {
+            height: 40px;
+            margin: 10px;
+        }
+
+        .options {
+            float: right;
+        }
+
+        .options button {
+            background-color: #ff0000;
+            color: #fff;
+            font-size: 15px;
+            padding: 10px;
+            margin-top: 10px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-family: 'Fredoka', sans-serif;
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        .options button:hover {
+            background-color: blue;
+        }
+
+        .whitespace {
+            padding-bottom: 100px;
+            background-color: white;
+            opacity: 0.7;
+            border-radius: 20px;
+            position: relative;
+        }
+        h1 {
+            font-family: 'Luckiest Guy', sans-serif;
+            font-size: 50px;
+        }
+        p {
+            font-family: 'Varela Round', sans-serif;
+            font-size: 25px;
+            text-align: left;
+        }
+    </style>
+    <script>
+        // JavaScript to handle scroll animation
+        let prevScrollPos = window.pageYOffset;
+        let header = document.querySelector('.header');
+        let isScrolling = false;
+
+        function scrollAnimation() {
+            isScrolling = true;
+            let currentScrollPos = window.pageYOffset;
+            if (prevScrollPos > currentScrollPos) {
+                header.classList.remove('hidden');
+            } else if (prevScrollPos < currentScrollPos) {
+                header.classList.add('hidden');
+            }
+            prevScrollPos = currentScrollPos;
+
+            window.requestAnimationFrame(function () {
+                isScrolling = false;
+            });
+        }
+
+        window.addEventListener('scroll', function () {
+            if (!isScrolling) {
+                window.requestAnimationFrame(scrollAnimation);
+            }
+        });
+
+        // Initially check scroll position to hide/show the header
+        window.addEventListener('DOMContentLoaded', function () {
+            if (window.scrollY > 0) {
+                header.classList.add('hidden');
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="images/header.png" alt="Logo">
+        </div>
+        <div class="options">
+            <button type="button" onclick="window.location='index.html'">Home</button>
+            <button type="button" onclick="window.location='about.html'">About</button>
+            <button type="button" onclick="window.location='WebCoding.html'">Html Help</button>
+            <button type="button" onclick="window.location='js.html'">JavaScript Journey</button>
+            <button type="button" onclick="window.location='py.html'">Python Programming</button>
+            <button type="button" onclick="window.location='basic.html'">Begginers' Basic</button>
+            <button type="button" onclick="window.location='vid.html'">Video Tutorials</button>
+        </div>
+    </div>
+
+    <h1 style="text-align: center;">Welcome to the <img style="height: 45px; width: auto;" src="images/header.png"> website!</h1> <!--This can also say "Python Programming" or "HTML Help", etc. Ignore the img thing, thats just for the index page.-->
+
+    <p><h1 style="text-align: center;">Python Programming</h1><br><ul><h2>Downloading Python:</h3></ul>&emsp;&emsp;In order to learn how to code in python, you need to have python. <br>&emsp;&emsp;Here is how you can get python: <ul><li>You must know which operating system you are using(Windows/Mac/Linux).</li><li>You must know what your machine's driver number is; either 32 or 64. (Most of the newer devices are 64-bit)</li><li>You must click <a style= Color:aqua; href="https://www.python.org/downloads/">Here</a> and select your operating system with the number driver(64x for a 64-bit driver and 86x for 32-bit driver.)</li></ul>&emsp;Open the download by using the arrow on the downloading file, and select "Open When Done" or "Open". When the popup window opens, click the "Add Python to Path" checkbox and click on "Install Now".<br> Select "Next" and when you are asked to choose where to put Python, click "Browse" and select the folder called "Code" in the desktop folder, if you didn't yet create "Code" in desktop, do it now. right click on the empty part of the desktop and click "New" and then "Folder". Label this file "Code". then place python in that folder. Open your terminal(see <a style=Color:aqua; href="about.html">About</a>)JUST A FEW GOOD RULES TO KEEP
+        1.Go through each excercise slowly and carefully.
+        2.Always type everything in by hand, never copy paste from what you see. This will help improve your typing skills so you can code faster.
+        3.Copy everything exactly as you see it unless the instructions state otherwise.
+        4.Practice paying attention to detail so you will catch any errors that you make.
+        5.If you can't fix the bugs in your code, don't be afraid to ask someone you trust for help.(You can email me for help at kidskankode247@gmail.com)
+        LESSON NUMBER 1: Variables
+        First, you need to know what variables, strings, integers, booleans, and floats are. 
+        A variable is a name that you create and then use it in your program instead of the actual thing you want to use in your program. 
+        For example: Let's say I have a variable named vary1, and I want vary1 to represent a string("This is a string of text"), integer(6), boolean(True/False), or float(4.65).
+        So I will type a line that looks something like this. 
+            vary1 = "This string is represented by vary1"
+        Any time I refer to vary1 in my program, the computer will automatically replace vary1 with "This string is represented by vary1".
+        For example, if I write a line of code along the lines of 'the text that should be displayed on the screen is vary1', then when the computer reads it, it will read the line of code differently: 'the text that should be displayed is "This string is represented by vary1".
+        (When we get up to the lesson about print statements, you will see the actual code looks very different than 'the text that should be displayed on the screen is vary1', but we'll worry about that later.)
+        A quick rundown on what all of the different variable types are: string - a sentence or word(s) grouped together by " " or ' '
+                                                                         integer - a number without a decimal point(.), can be positive or negative
+                                                                         float - a number with a decimal point (which can be 0.0), can be positive or negative
+                                                                         boolean - either True or False, with 'and', 'or', and 'not' but more on that later
+        YOU TRY IT!
+        Create one variable for each type (strings, integers, booleans, floats) and run them using the next excercise with print statements.</p>
+
+</body>
+<footer>
+    <p style="background-color: black; color: white; text-align: center; font-family: 'Open Sans', sans-serif; font-size: 20px;">&copyKidsCanCode 2023. All rights Reserved. All material is in the possesion of the creator, Shalom Frenkel. Do not copy in any way.</p>
+</footer>
+</html>
+<!--linux
+atom:
+sudo add-apt-repository ppa:webupd8team/atom
+
+sudo apt-get update
+
+sudo apt-get install atom
+
+vs:
+sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
+
+sudo apt-get update
+
+sudo apt-get install ubuntu-make
+
+notepadqq:
+sudo snap install --classic notepadqq
+
+mac
+vs:
+https://code.visualstudio.com/download https://code.visualstudio.com/download#
+
+sublime text:
+https://www.sublimetext.com/download_thanks?target=mac
+
+https://www.python.org/downloads/release/python-3114/ -->
+                                                     
+
+
+
