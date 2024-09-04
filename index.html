@@ -142,27 +142,8 @@
     </div>
 
     <h1>Welcome to the <img style="height: 45px; width: auto;" src="images/header.png"> website!</h1> <!--This can also say "Python Programming" or "HTML Help", etc. Ignore the img thing, thats just for the index page.-->
-    <py-config>packages = ["tkinter"]</py-config>
-    <py-script>import tkinter as tk
-        import csv
-        root = tk.Tk()
-        root.title("Create Account")
-        root.geometry("600x600")
-        root.resizable(False, False)
-        #root.mainloop()
-        def create():
-            namevar = 'cool'
-            frame = tk.Frame(root)
-            frame.pack()
-            label = tk.Label(frame, text = "Create your account. Fill in your information below:", font = '75')
-            label.grid(row = 1, column = 1)
-            entry = tk.Entry(frame, textvariable = namevar, font = ('calibre', 10, 'normal'))
-            entry.insert(0, "Please enter your username here: ")
-            entry.config(width=30, fg="gray")
-            entry.grid(row = 5, column = 1)
-            root.mainloop()
-            
-        create()</py-script>
+    <py-config></py-config>
+    <py-script></py-script>
     <p>Do you already have an Account? <a style= color:aqua; href="pytests/create.py">Begin</a></p>
 
 </body>
