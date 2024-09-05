@@ -143,143 +143,143 @@
 
     <p>
 
-JavaScript is a powerful programming language that allows you to add interactivity and dynamic content to your websites. It is recommended to learn HTML/CSS first. However, this guide will help you get started with the basics of JavaScript.
+JavaScript is a powerful programming language that allows you to add interactivity and dynamic content to your websites. <br>It is recommended to learn HTML/CSS first. However, this guide will help you get started with the basics of JavaScript.
 
-## 1. What is JavaScript?
+<br>## 1. What is JavaScript?<br><br>
 
-JavaScript is a scripting language that runs in web browsers. It can:
-- Modify webpage content
-- Respond to user actions
-- Perform calculations
-- Communicate with servers
+JavaScript is a scripting language that runs in web browsers. It can:<br>
+- Modify webpage content<br>
+- Respond to user actions<br>
+- Perform calculations<br>
+- Communicate with servers<br><br>
 
-## 2. Adding JavaScript to Your HTML
+## 2. Adding JavaScript to Your HTML<br>
 
-There are two main ways to add JavaScript to your HTML:
+There are two main ways to add JavaScript to your HTML:<br>
 
-### 2.1 Inline JavaScript
+### 2.1 Inline JavaScript<br><br>
 
-Add JavaScript directly in your HTML file using the <script> tag:
+Add JavaScript directly in your HTML file using the <script> tag:<br>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My Page</title>
-</head>
-<body>
-    <h1>Welcome!</h1>
+<!DOCTYPE html><br>
+<html><br>
+<head><br>
+    <title>My Page</title><br>
+</head><br>
+<body><br>
+    <h1>Welcome!</h1><br>
     
-    <script>
-        alert("Hello, World!");
-    </script>
-</body>
-</html>
+    <script><br>
+        alert("Hello, World!");<br>
+    </script><br>
+</body><br>
+</html><br><br>
 
-### 2.2 External JavaScript File
+### 2.2 External JavaScript File<br>
 
-Create a separate .js file and link it in your HTML:
+Create a separate .js file and link it in your HTML:<br>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My Page</title>
-</head>
-<body>
-    <h1>Welcome!</h1>
+<!DOCTYPE html><br>
+<html><br>
+<head><br>
+    <title>My Page</title><br>
+</head><br>
+<body><br>
+    <h1>Welcome!</h1><br>
     
-    <script src="myscript.js"></script>
-</body>
-</html>
+    <script src="myscript.js"></script><br>
+</body><br>
+</html><br>
 
-Then in myscript.js:
+Then in myscript.js:<br>
 
-alert("Hello, World!");
+alert("Hello, World!");<br><br>
 
-## 3. JavaScript Basics
+## 3. JavaScript Basics<br><br>
 
-### 3.1 Variables
+### 3.1 Variables<br>
 
-Variables store data. Use 'let' to declare variables:
+Variables store data. Use 'let' to declare variables:<br>
 
-let name = "John";
-let age = 25;
-let isStudent = true;
+let name = "John";<br>
+let age = 25;<br>
+let isStudent = true;<br><br>
 
-### 3.2 Data Types
+### 3.2 Data Types<br>
 
-JavaScript has several data types:
-- String: "Hello"
-- Number: 42
-- Boolean: true or false
-- Array: [1, 2, 3]
-- Object: {name: "John", age: 25}
+JavaScript has several data types:<br>
+- String: "Hello"<br>
+- Number: 42<br>
+- Boolean: true or false<br>
+- Array: [1, 2, 3]<br>
+- Object: {name: "John", age: 25}<br><br>
 
-### 3.3 Functions
+### 3.3 Functions<br>
 
-Functions are reusable blocks of code:
+Functions are reusable blocks of code:<br>
 
-function greet(name) {
-    alert("Hello, " + name + "!");
-}
+function greet(name) {<br>
+    alert("Hello, " + name + "!");<br>
+}<br>
 
-greet("Alice"); // Shows alert: "Hello, Alice!"
+greet("Alice"); // Shows alert: "Hello, Alice!"<br><br>
 
-### 3.4 Conditionals
+### 3.4 Conditionals<br>
 
-Use if-else statements to make decisions:
+Use if-else statements to make decisions:<br>
 
-let age = 18;
+let age = 18;<br>
 
-if (age >= 18) {
-    console.log("You can vote!");
-} else {
-    console.log("You're too young to vote.");
-}
+if (age >= 18) {<br>
+    console.log("You can vote!");<br>
+} else {<br>
+    console.log("You're too young to vote.");<br>
+}<br><br>
 
-### 3.5 Loops
+### 3.5 Loops<br>
 
-Loops repeat actions:
+Loops repeat actions:<br>
 
-for (let i = 0; i < 5; i++) {
-    console.log("Count: " + i);
-}
+for (let i = 0; i < 5; i++) {<br>
+    console.log("Count: " + i);<br>
+}<br><br>
 
-## 4. Interacting with HTML
+## 4. Interacting with HTML<br>
 
-JavaScript can change HTML content:
+JavaScript can change HTML content:<br>
 
-document.getElementById("myElement").innerHTML = "New text";
+document.getElementById("myElement").innerHTML = "New text";<br><br>
 
-## 5. Events
+## 5. Events<br>
 
 Respond to user actions:
 
-<button onclick="alert('Button clicked!')">Click me</button>
+<button onclick="alert('Button clicked!')">Click me</button><br><br>
 
-## 6. Simple Project: Counter
+## 6. Simple Project: Counter<br>
 
-Here's a simple project to practice:
+Here's a simple project to practice:<br>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Counter</title>
-</head>
-<body>
-    <h1>Counter: <span id="count">0</span></h1>
-    <button onclick="increment()">Increase</button>
+<!DOCTYPE html><br>
+<html><br>
+<head><br>
+    <title>Counter</title><br>
+</head><br>
+<body><br>
+    <h1>Counter: <span id="count">0</span></h1><br>
+    <button onclick="increment()">Increase</button><br>
 
-    <script>
-        let count = 0;
-        function increment() {
-            count++;
-            document.getElementById("count").innerHTML = count;
-        }
-    </script>
-</body>
-</html>
+    <script><br>
+        let count = 0;<br>
+        function increment() {<br>
+            count++;<br>
+            document.getElementById("count").innerHTML = count;<br>
+        }<br>
+    </script><br>
+</body><br>
+</html><br><br>
 
-## Conclusion
+## Conclusion<br>
 
 This is just the beginning! JavaScript has many more features to explore. Practice these basics, and you'll be on your way to creating interactive websites.</p>
 
