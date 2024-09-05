@@ -113,7 +113,7 @@ Respond to user actions:
 
 ## 6. Simple Project: Counter
 
-Here's a simple project to practice:
+Here's a simple project to practice. Try typing this into notepad or another text editor and save as index.html. Then click on the file and see what happens! Type this exactly:
 
 <!DOCTYPE html>
 <html>
