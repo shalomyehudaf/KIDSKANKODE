@@ -87,6 +87,13 @@
             font-family: 'Varela Round', sans-serif;
             font-size: 25px;
         }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
     </style>
     <script>
         // JavaScript to handle scroll animation
@@ -140,147 +147,11 @@
     </div>
 
     <h1>Welcome to the <img style="height: 45px; width: auto;" src="images/header.png"> website: JavaScript Edition</h1> <!--This can also say "Python Programming" or "HTML Help", etc. Ignore the img thing, thats just for the index page.-->
+<pre id="filecontent"></pre>
+<script src="scriptjs.js"></script>
+<p>
 
-    <p>
-
-JavaScript is a powerful programming language that allows you to add interactivity and dynamic content to your websites. <br>It is recommended to learn HTML/CSS first. However, this guide will help you get started with the basics of JavaScript.
-
-<br>## 1. What is JavaScript?<br><br>
-
-JavaScript is a scripting language that runs in web browsers. It can:<br>
-- Modify webpage content<br>
-- Respond to user actions<br>
-- Perform calculations<br>
-- Communicate with servers<br><br>
-
-## 2. Adding JavaScript to Your HTML<br>
-
-There are two main ways to add JavaScript to your HTML:<br>
-
-### 2.1 Inline JavaScript<br><br>
-
-Add JavaScript directly in your HTML file using the "script" tag:<br>
-
-<!DOCTYPE html><br>
-<html><br>
-<head><br>
-    <title>My Page</title><br>
-</head><br>
-<body><br>
-    <h1>Welcome!</h1><br>
-    <script><br>
-        alert("Hello, World!");<br>
-    </script><br>
-</body><br>
-</html><br><br>
-
-### 2.2 External JavaScript File<br>
-
-Create a separate .js file and link it in your HTML:<br>
-
-<!DOCTYPE html><br>
-<html><br>
-<head><br>
-    <title>My Page</title><br>
-</head><br>
-<body><br>
-    <h1>Welcome!</h1><br>
-    
-    <script src="myscript.js"></script><br>
-</body><br>
-</html><br>
-
-Then in myscript.js:<br>
-
-alert("Hello, World!");<br><br>
-
-## 3. JavaScript Basics<br><br>
-
-### 3.1 Variables<br>
-
-Variables store data. Use 'let' to declare variables:<br>
-
-let name = "John";<br>
-let age = 25;<br>
-let isStudent = true;<br><br>
-
-### 3.2 Data Types<br>
-
-JavaScript has several data types:<br>
-- String: "Hello"<br>
-- Number: 42<br>
-- Boolean: true or false<br>
-- Array: [1, 2, 3]<br>
-- Object: {name: "John", age: 25}<br><br>
-
-### 3.3 Functions<br>
-
-Functions are reusable blocks of code:<br>
-
-function greet(name) {<br>
-    alert("Hello, " + name + "!");<br>
-}<br>
-
-greet("Alice"); // Shows alert: "Hello, Alice!"<br><br>
-
-### 3.4 Conditionals<br>
-
-Use if-else statements to make decisions:<br>
-
-let age = 18;<br>
-
-if (age >= 18) {<br>
-    console.log("You can vote!");<br>
-} else {<br>
-    console.log("You're too young to vote.");<br>
-}<br><br>
-
-### 3.5 Loops<br>
-
-Loops repeat actions:<br>
-
-for (let i = 0; i < 5; i++) {<br>
-    console.log("Count: " + i);<br>
-}<br><br>
-
-## 4. Interacting with HTML<br>
-
-JavaScript can change HTML content:<br>
-
-document.getElementById("myElement").innerHTML = "New text";<br><br>
-
-## 5. Events<br>
-
-Respond to user actions:
-
-<button onclick="alert('Button clicked!')">Click me</button><br><br>
-
-## 6. Simple Project: Counter<br>
-
-Here's a simple project to practice:<br>
-
-<!DOCTYPE html><br>
-<html><br>
-<head><br>
-    <title>Counter</title><br>
-</head><br>
-<body><br>
-    <h1>Counter: <span id="count">0</span></h1><br>
-    <button onclick="increment()">Increase</button><br>
-
-    <script><br>
-        let count = 0;<br>
-        function increment() {<br>
-            count++;<br>
-            document.getElementById("count").innerHTML = count;<br>
-        }<br>
-    </script><br>
-</body><br>
-</html><br><br>
-
-## Conclusion<br>
-
-This is just the beginning! JavaScript has many more features to explore. Practice these basics, and you'll be on your way to creating interactive websites.</p>
+</p>
 
 </body>
 <footer>
