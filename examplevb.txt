@@ -1,4 +1,4 @@
-Visual Basic (VB) is a programming language developed by Microsoft. It's known for its simplicity and is often used for developing Windows applications and web services.
+"Visual Basic (VB) is a programming language developed by Microsoft. It's known for its simplicity and is often used for developing Windows applications and web services.
 
 ## 1. What is Visual Basic?
 
@@ -115,4 +115,4 @@ End Class
 
 ## Conclusion
 
-This is just the beginning of Visual Basic! As you practice these basics, you'll be on your way to creating more complex Windows applications. Remember to explore Visual Studio's features and the extensive .NET Framework library to enhance your VB programming skills.
+This is just the beginning of Visual Basic! As you practice these basics, you'll be on your way to creating more complex Windows applications. Remember to explore Visual Studio's features and the extensive .NET Framework library to enhance your VB programming skills."
