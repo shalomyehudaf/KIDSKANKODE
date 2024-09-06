@@ -11,4 +11,4 @@ function fetchanddisplay(url){
             filecontent.textContent = 'Error loading file content.';
         })
 }
-fetchanddisplay('examplepy.html');
+fetchanddisplay('examplepy.txt');
