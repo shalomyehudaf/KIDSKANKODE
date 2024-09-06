@@ -12,3 +12,4 @@ function fetchanddisplay(url){
         })
 }
 
+fetchanddisplay('examplepy.txt');
